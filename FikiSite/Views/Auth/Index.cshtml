@@ -1,0 +1,43 @@
+﻿@model System.Collections.Generic.List<FikiSite.Models.SignModels.Sign>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .sign {
+        overflow: hidden;
+        word-wrap: break-word;
+        background: #F5F5F5;
+        border: 2px solid #dcdcdc;
+        margin: 10px;
+        display: inline-block;
+        width: 250px;
+        height: 250px; /* Размеры */
+        padding: 10px;
+        border-radius: 25px; /* Радиус скругления */
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+
+</div>
+@{int i = 0; }
+@foreach (var item in Model)
+{
+    i++;
+    if (i == 9)
+    {
+        break;
+    }
+    else
+    {
+        <div class="sign">
+            <p>@item.Name</p>
+            <p>@item.Text</p>
+        </div>
+    }
+}
