@@ -34,7 +34,8 @@ namespace FikiSite.Controllers
         public IActionResult Index()
         {
             List<Sign> list = Sign.Shuffle(testlist);
-
+            
+            string test = "gegerwjhrtk";
 
             return View(list);
         }
